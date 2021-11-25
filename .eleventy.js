@@ -188,7 +188,7 @@ module.exports = function(eleventyConfig) {
     // You can also pass this in on the command line using `--pathprefix`
     // pathPrefix: "/",
 
-//     pathPrefix: "/palets-de-madera/",
+    pathPrefix: "/gh-page-example/",
 
 
     markdownTemplateEngine: "liquid",
