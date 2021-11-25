@@ -1,0 +1,16 @@
+{
+  "title": "Palets de madera",
+  "url": "https://palets-de-madera.es/",
+  "description": "Venta de palets de madera en España.",
+  "longdescription": "Somos Brindamos a las empresas de Valencia y Malaga, palets nuevos, de calidad. Disponemos de varias medidas y fabricamos palets personalizados, según la necesidad del consumidor. Nuestro objetivo es siempre dar el mejor servicio a nuestros clientes con la mayor brevedad posible. Si quieres comprar Palets en Valencia o Malaga, somos tu solución.",
+  "feed": {
+    "subtitle": "Venta de palets de madera en España.",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://palets-de-madera.es/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://palets-de-madera.es/feed/feed.json"
+  }
+}

@@ -1,0 +1,131 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update
+
+media_folder: "src/img"
+public_folder: "/img"
+
+collections:
+
+  - name: "main"
+    label: "основные данные"
+    files:
+      - label: "О фирме"
+        name: "metadata"
+        file: "src/_data/metadata.json"
+        fields:
+          - {label: Титул, name: title, widget: string}
+          - {label: URL, name: url, widget: string}
+          - {label: Заголовок, name: description, widget: string}
+          - {label: Описание, name: longdescription, widget: string}
+      - label: "Заголовки"
+        name: "titles"
+        file: "src/_data/titles.json"
+        fields:
+          - {label: "Адреса", name: "addresses", widget: "string", required: false}
+          - {label: "контакты", name: "contactos", widget: "string", required: false}
+          - {label: "Преимущества", name: "benefits", widget: "string", required: false}
+          - {label: "Товары", name: "products", widget: "string", required: false}
+          - {label: "Нижнее меню", name: "footermenu", widget: "string", required: false}
+          - {label: "над заголовоком", name: "subtitle", widget: "string", required: false}
+      - label: "Преимущества"
+        name: "benefits"
+        file: "src/_data/features.json"
+        fields:
+          - label: "Преимущества"
+            name: "items"
+            widget: "list"
+            fields:
+            - {label: "Заголовок", name: "title", widget: "string", required: false}
+            - {label: "Подзаголовок", name: "subtitle", widget: "string", required: false}
+            - {label: "текст", name: "text", widget: "string", required: false}
+      - label: "Контакты"
+        name: "contacts"
+        file: "src/_data/contacts.json"
+        fields:
+          - {label: "phone", name: "phone", widget: "string", required: false}
+          - {label: "whatsapp", name: "whatsapp", widget: "string", required: false}
+          - {label: "email", name: "email", widget: "string", required: false}
+          - label: "Филиал 1"
+            name: "filial_1"
+            widget: "object"
+            fields:
+              - {label: "Город", name: "city", widget: "string", required: false}
+              - {label: "Адрес", name: "address", widget: "string", required: false}
+          - label: "Филиал 2"
+            name: "filial_2"
+            widget: "object"
+            fields:
+              - {label: "Город", name: "city", widget: "string", required: false}
+              - {label: "Адрес", name: "address", widget: "string", required: false}
+  - name: "palets"
+    label: "Палеты"
+    folder: "src/palets"
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Короткое описание", name: "description", widget: "string", required: false}
+      - {label: "tipo", name: "tipo", widget: "string", required: false}
+      - {label: "uso", name: "uso", widget: "string", required: false}
+      - {label: "Tipo de especies", name: "woodtype", widget: "string", required: false}
+      - {label: "Especie", name: "wood", widget: "string", required: false}
+      - {label: "condicion", name: "condicion", widget: "string", required: false}
+      - {label: "region", name: "region", widget: "string", required: false}
+      - {label: "Origen", name: "origen", widget: "string", required: false}
+      - {label: "Característica clave", name: "clave", widget: "string", required: false}
+      - {label: "volumen", name: "volumen", widget: "string", required: false}
+      - {label: "Altura", name: "height", widget: "string", required: false}
+      - {label: "Grosor", name: "thickness", widget: "string", required: false}
+      - {label: "Ancho", name: "width", widget: "string", required: false}
+      - {label: "Largo", name: "length", widget: "string", required: false}
+      - {label: "Marca", name: "mark", widget: "string", required: false}
+      - {label: "tablas de capa superior", name: "board", widget: "string", required: false}
+      - {label: "tablas transversales", name: "traverse", widget: "string", required: false}
+      - {label: "Sistema", name: "system", widget: "string", required: false}
+      - {label: "calidad", name: "calidad", widget: "string", required: false}
+      - {label: "desecado", name: "desecado", widget: "string", required: false}
+      - {label: "price", name: "price", widget: "string", required: false}
+      - {label: "fechaDeEntrega", name: "fechaDeEntrega", widget: "string", required: false}
+      - {label: "vendePara", name: "vendePara", widget: "string", required: false}
+      - {label: "date", name: "date", widget: "date", format: 'YYYY-MM-DD', required: false}
+      - {label: "img", name: "img", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false }
+      - {label: "Полное описание", name: "body", widget: "markdown", required: false}
+
+  - name: "madera"
+    label: "Древесина"
+    folder: "src/madera"
+    create: true
+    extension: md
+    slug: "{{slug}}"
+    fields:
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Короткое описание", name: "description", widget: "string", required: false}
+      - {label: "tipo", name: "tipo", widget: "string", required: false}
+      - {label: "uso", name: "uso", widget: "string", required: false}
+      - {label: "Tipo de especies", name: "woodtype", widget: "string", required: false}
+      - {label: "Especie", name: "wood", widget: "string", required: false}
+      - {label: "condicion", name: "condicion", widget: "string", required: false}
+      - {label: "region", name: "region", widget: "string", required: false}
+      - {label: "Origen", name: "origen", widget: "string", required: false}
+      - {label: "Característica clave", name: "clave", widget: "string", required: false}
+      - {label: "volumen", name: "volumen", widget: "string", required: false}
+      - {label: "Altura", name: "height", widget: "string", required: false}
+      - {label: "Grosor", name: "thickness", widget: "string", required: false}
+      - {label: "Ancho", name: "width", widget: "string", required: false}
+      - {label: "Largo", name: "length", widget: "string", required: false}
+      - {label: "Marca", name: "mark", widget: "string", required: false}
+      - {label: "tablas de capa superior", name: "board", widget: "string", required: false}
+      - {label: "tablas transversales", name: "traverse", widget: "string", required: false}
+      - {label: "Sistema", name: "system", widget: "string", required: false}
+      - {label: "calidad", name: "calidad", widget: "string", required: false}
+      - {label: "desecado", name: "desecado", widget: "string", required: false}
+      - {label: "price", name: "price", widget: "string", required: false}
+      - {label: "fechaDeEntrega", name: "fechaDeEntrega", widget: "string", required: false}
+      - {label: "vendePara", name: "vendePara", widget: "string", required: false}
+      - {label: "date", name: "date", widget: "date", format: 'YYYY-MM-DD', required: false}
+      - {label: "img", name: "img", widget: "string", required: false}
+      - {label: "Tags", name: "tags", widget: "list", required: false }
+      - {label: "Полное описание", name: "body", widget: "markdown", required: false}
